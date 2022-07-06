@@ -89,6 +89,21 @@
           </folder>
         </folder>
       </folder>
+      <folder name="bootloader">
+        <folder name="app_properties">
+          <file name="app_properties.c" uri="studio:/sdk/platform/bootloader/app_properties/app_properties.c"/>
+        </folder>
+        <folder name="api">
+          <file name="btl_interface.c" uri="studio:/sdk/platform/bootloader/api/btl_interface.c"/>
+          <file name="btl_interface_storage.c" uri="studio:/sdk/platform/bootloader/api/btl_interface_storage.c"/>
+          <file name="application_properties.h" uri="studio:/sdk/platform/bootloader/api/application_properties.h"/>
+          <file name="btl_errorcode.h" uri="studio:/sdk/platform/bootloader/api/btl_errorcode.h"/>
+          <file name="btl_interface.h" uri="studio:/sdk/platform/bootloader/api/btl_interface.h"/>
+          <file name="btl_interface_parser.h" uri="studio:/sdk/platform/bootloader/api/btl_interface_parser.h"/>
+          <file name="btl_interface_storage.h" uri="studio:/sdk/platform/bootloader/api/btl_interface_storage.h"/>
+          <file name="btl_reset_info.h" uri="studio:/sdk/platform/bootloader/api/btl_reset_info.h"/>
+        </folder>
+      </folder>
       <folder name="driver">
         <folder name="button">
           <folder name="src">
@@ -316,6 +331,8 @@
   <includePath uri="studio:/sdk/platform/Device/SiliconLabs/EFR32MG12P/Include"/>
   <includePath uri="studio:/sdk/platform/common/inc"/>
   <includePath uri="studio:/sdk/hardware/board/inc"/>
+  <includePath uri="studio:/sdk/platform/bootloader"/>
+  <includePath uri="studio:/sdk/platform/bootloader/api"/>
   <includePath uri="studio:/sdk/platform/driver/button/inc"/>
   <includePath uri="studio:/sdk/platform/service/cli/inc"/>
   <includePath uri="studio:/sdk/platform/service/cli/src"/>
@@ -335,6 +352,7 @@
   <includePath uri="studio:/sdk/platform/service/udelay/inc"/>
   <macroDefinition name="DEBUG_EFM"/>
   <macroDefinition name="EFR32MG12P332F1024GL125"/>
+  <macroDefinition name="SL_APP_PROPERTIES"/>
   <macroDefinition name="SL_BOARD_NAME" value="&quot;BRD4166A&quot;"/>
   <macroDefinition name="SL_BOARD_REV" value="&quot;D03&quot;"/>
   <macroDefinition name="SL_COMPONENT_CATALOG_PRESENT"/>

@@ -105,24 +105,24 @@
 // [PRS.CH11]$
 
 // $[TIMER0]
-// TIMER0 CC0 on PD11
-#define TIMER0_CC0_PORT                          gpioPortD
-#define TIMER0_CC0_PIN                           11
-#define TIMER0_CC0_LOC                           19
-
-// TIMER0 CC1 on PD12
-#define TIMER0_CC1_PORT                          gpioPortD
-#define TIMER0_CC1_PIN                           12
-#define TIMER0_CC1_LOC                           19
-
-// TIMER0 CC2 on PD13
-#define TIMER0_CC2_PORT                          gpioPortD
-#define TIMER0_CC2_PIN                           13
-#define TIMER0_CC2_LOC                           19
-
 // [TIMER0]$
 
 // $[TIMER1]
+// TIMER1 CC0 on PD11
+#define TIMER1_CC0_PORT                          gpioPortD
+#define TIMER1_CC0_PIN                           11
+#define TIMER1_CC0_LOC                           19
+
+// TIMER1 CC1 on PD12
+#define TIMER1_CC1_PORT                          gpioPortD
+#define TIMER1_CC1_PIN                           12
+#define TIMER1_CC1_LOC                           19
+
+// TIMER1 CC2 on PD13
+#define TIMER1_CC2_PORT                          gpioPortD
+#define TIMER1_CC2_PIN                           13
+#define TIMER1_CC2_LOC                           19
+
 // [TIMER1]$
 
 // $[USART0]

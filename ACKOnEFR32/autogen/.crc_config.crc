@@ -1,4 +1,6 @@
 #CRC Codes for initially generated config files -- do not modify!
+app_properties_config.h=-77184399
+btl_interface_cfg.h=1386654228
 emlib_core_debug_config.h=171843933
 sl_board_control_config.h=1698458079
 sl_cli_config.h=433818975

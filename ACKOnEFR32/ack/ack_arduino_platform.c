@@ -38,6 +38,12 @@ const PlatformPinMap ThunderBoard2PinMap[ACK_HW_PIN_BUTT] =
 
 void ACKPlatform_Initialize()
 {
+    GPIO_PinModeSet(gpioPortJ, 14, gpioModePushPull, 1);
+//    GPIO_PinModeSet(gpioPortI, 0, gpioModePushPull, 1);
+//    GPIO_PinModeSet(gpioPortI, 1, gpioModePushPull, 1);
+    GPIO_PinModeSet(gpioPortI, 2, gpioModePushPull, 1);
+//    GPIO_PinModeSet(gpioPortI, 3, gpioModePushPull, 1);
+
     GPIO_PinModeSet(ThunderBoard2PinMap[ACK_HW_PIN_HOST_INTERRUPT].pinPort,
                     ThunderBoard2PinMap[ACK_HW_PIN_HOST_INTERRUPT].pinID,
                     gpioModeInputPull,
@@ -48,6 +54,7 @@ void ACKPlatform_Initialize()
                     1);
 
     sl_led_turn_off(&sl_led_led0);
+    sl_led_turn_off(&sl_inst0);
 }
 
 uint32_t ACKPlatform_TickCount(void)
@@ -100,7 +107,14 @@ void ACKPlatform_SetDigitalPinPWMLevel(ACKHardwarePin_t pin, uint8_t val)
         return;
     }
 
-    sl_led_set_rgb_color(&sl_inst0, 0, 0, 65535 * val / 100);
+    if (0 == val) {
+        sl_led_turn_off(&sl_led_led0);
+        sl_led_turn_off(&sl_inst0);
+    } else {
+        sl_led_turn_on(&sl_led_led0);
+        sl_led_set_rgb_color(&sl_inst0, 65535 * val / 100, 0, 65535);
+        sl_led_turn_on(&sl_inst0);
+    }
 }
 
 bool ACKPlatform_Send(const void *buffer, size_t length, uint32_t timeoutMilliseconds)

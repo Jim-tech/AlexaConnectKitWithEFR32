@@ -8,6 +8,7 @@
 #include "sl_device_init_lfxo.h"
 #include "sl_device_init_clocks.h"
 #include "sl_device_init_emu.h"
+#include "btl_interface.h"
 #include "sl_board_control.h"
 #include "sl_sleeptimer.h"
 #include "gpiointerrupt.h"
@@ -31,6 +32,7 @@ void sl_platform_init(void)
   sl_device_init_clocks();
   sl_device_init_emu();
   sl_board_init();
+  bootloader_init();
 }
 
 void sl_driver_init(void)
